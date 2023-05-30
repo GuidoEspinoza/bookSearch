@@ -12,14 +12,14 @@ Por último cuenta con una vista de favoritos donde el usuario puede guardar lib
 
 ## Dependencias utilizadas
 
-- Vite `npm create vite`
+- Vite `npm create vite@latest`
+- React Redux `npm install react-redux`
 - React Router Dom `npm install react-router-dom`
+- React Table `npm install @tanstack/react-table`
 - Headless React `npm install @headlessui/react`
-- React Table `npm install @tenstack/react-table`
 - Formik `npm install formik --save`
 - Jest `npm install --save-dev jest`
-- React Redux `npm install react-redux`
-- Storybook `npx install @storybook/react`
+- Storybook `npx storybook@latest init`
 
 ## Ejecución
 
