@@ -12,14 +12,14 @@ Por último cuenta con una vista de favoritos donde el usuario puede guardar lib
 
 ## Dependencias utilizadas
 
-- Vite `npm create vite@latest`
-- React Redux `npm install react-redux`
-- React Router Dom `npm install react-router-dom`
-- React Table `npm install @tanstack/react-table`
-- Headless React `npm install @headlessui/react`
-- Formik `npm install formik --save`
-- Jest `npm install --save-dev jest`
-- Storybook `npx storybook@latest init`
+- Vite: Entorno de desarrollo rápido para aplicaciones web con React. `npm create vite@latest`
+- React Redux: Biblioteca para gestionar el estado de la aplicación en React. `npm install react-redux`
+- React Redux Toolkit: Utilidades para simplificar el desarrollo con Redux. `npm install @reduxjs/toolkit`
+- React Router Dom: Manejo de navegación en una aplicación de React. `npm install react-router-dom`
+- React Table: Biblioteca para crear tablas flexibles en React. `npm install @tanstack/react-table`
+- Headless React: Componentes sin estilos predefinidos para interfaces personalizadas. `npm install @headlessui/react`
+- Jest: Framework de pruebas unitarias para JavaScript. `npm install --save-dev jest`
+- Storybook: Herramienta para desarrollar y mostrar componentes de forma aislada. `npx storybook@latest init`
 
 ## Ejecución
 

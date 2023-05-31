@@ -1,0 +1,11 @@
+.header {
+    max-width  : var(--max-width);
+    width      : 100%;
+    display    : flex;
+    align-items: center;
+    height     : 2.5rem;
+}
+
+.headerText {
+    font: var(--font-h1);
+}

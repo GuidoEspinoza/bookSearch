@@ -1,0 +1,8 @@
+.switchTheme {
+    display: flex;
+    gap: 4px;
+}
+
+.textSwitchMode {
+    font: var(--font-h3);
+}
