@@ -6,7 +6,7 @@ const SwitchTheme = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
 
     // Estado para controlar el modo del tema (Light o Dark)
-    const [themeMode, setThemeMode] = useState('Light');
+    const [themeMode, setThemeMode] = useState('Light mode');
 
     // Estado para controlar el ícono del tema (sol o luna)
     const [iconTheme, setIconTheme] = useState('/icon-sun.svg');
@@ -29,13 +29,16 @@ const SwitchTheme = () => {
             ? setIconTheme('/icon-moon.svg') // Si el modo oscuro está activado, se cambia el ícono a la luna
             : setIconTheme('/icon-sun.svg'); // Si el modo oscuro está desactivado, se cambia el ícono al sol
         isDarkMode === true
-            ? setThemeMode('Dark') // Si el modo oscuro está activado, se establece el tema en 'Dark'
-            : setThemeMode('Light'); // Si el modo oscuro está desactivado, se establece el tema en 'Light'
+            ? setThemeMode('Dark mode') // Si el modo oscuro está activado, se establece el tema en 'Dark'
+            : setThemeMode('Light mode'); // Si el modo oscuro está desactivado, se establece el tema en 'Light'
     };
 
     return (
         <>
-            <label className="switchTheme">
+            <label
+                className="switchTheme"
+                onClick={toggleColorMode}
+            >
                 <span className="textSwitchMode">{themeMode}</span>
                 <img
                     src={iconTheme}
@@ -43,8 +46,6 @@ const SwitchTheme = () => {
                     className="iconSwitchMode"
                     width={20}
                     height={20}
-                    priority
-                    onClick={toggleColorMode}
                 />
             </label>
         </>

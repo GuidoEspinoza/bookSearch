@@ -1,6 +1,11 @@
 .app {
-    height: 100vh;
-    display: flex;
+    max-width     : var(--max-width);
+    width         : 100%;
+    display       : flex;
     flex-direction: column;
-    align-items: center;
+    align-items   : center;
+    border        : 2px dashed var(--font-color-primary);
+    padding       : 2rem;
+    border-radius : var(--border-radius-primary);
+    margin        : 2rem;
 }

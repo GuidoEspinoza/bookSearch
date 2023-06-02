@@ -1,8 +1,12 @@
 .switchTheme {
-    display: flex;
-    gap: 4px;
+    display      : flex;
+    gap          : 0.8rem;
+    align-items  : center;
+    border       : 1px solid var(--font-color-primary);
+    padding      : 0 1rem;
+    border-radius: var(--border-radius-secondary);
 }
 
 .textSwitchMode {
-    font: var(--font-h3);
+    font: var(--font-h2);
 }

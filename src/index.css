@@ -1,10 +1,11 @@
 :root {
-  --max-width              : 1520px;
+  --max-width              : 1200px;
   --border-radius-primary  : 1rem;
   --border-radius-secondary: 0.6rem;
 
-  --background-color     : #141d2f;
-  --background-color-card: #1e2a47;
+  --background-color           : #141d2f;
+  --background-color-table-head: #2f4271;
+  --background-color-table-even: #592d9c;
 
   --font-color-primary    : #ffffff;
   --font-color-cta        : #0079ff;
@@ -22,8 +23,9 @@
 
 .light-mode {
 
-  --background-color     : #f6f8ff;
-  --background-color-card: #fefefe;
+  --background-color           : #f6f8ff;
+  --background-color-table-head: #bda9a9;
+  --background-color-table-even: #8aafd5;
 
   --font-color-primary: #2b3442;
 
@@ -53,5 +55,7 @@ a {
 }
 
 #root {
-  height: 100vh;
+  height     : 100vh;
+  display    : flex;
+  align-items: center;
 }
