@@ -1,109 +1,51 @@
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './bookDetails.css'
 
-import {
-    createColumnHelper,
-    flexRender,
-    getCoreRowModel,
-    useReactTable
-} from '@tanstack/react-table';
-
+// Función para generar un slug a partir del nombre del libro
 const generateSlug = (name) => {
     const slug = name.toLowerCase().replace(/\s+/g, '-');
     return slug;
 };
 
 const BookDetail = ({ books }) => {
-    const { slug } = useParams();
-
-    console.log('books', books);
+    const { slug } = useParams(); // Obtener el slug de los parámetros de la URL
 
     const bookDetails = books?.books[0];
-    const book = bookDetails.find((book) => generateSlug(book.name) === slug);
+    const book = bookDetails.find((book) => generateSlug(book.name) === slug); // Encontrar el libro correspondiente al slug
 
-    console.log('bookDetails', bookDetails);
-    console.log('Book', book)
-
-    const columnHelper = createColumnHelper()
-
-    const columns = [
-        columnHelper.accessor('name', {
-            header: () => 'Name',
-            cell: (info) => info.getValue(),
-        }),
-        columnHelper.accessor((row) => row.authors, {
-            id: 'authors',
-            header: () => 'Author',
-            cell: (info) => info.getValue(),
-        }),
-        columnHelper.accessor('country', {
-            header: () => 'Country',
-            cell: (info) => info.getValue(),
-        }),
-        columnHelper.accessor('mediaType', {
-            header: () => 'Type',
-            cell: (info) => info.getValue(),
-        }),
-        columnHelper.accessor('released', {
-            header: () => 'Released',
-            cell: (info) => {
-                const date = new Date(info.getValue());
-                const year = date.getFullYear();
-                const month = String(date.getMonth() + 1).padStart(2, '0');
-                const day = String(date.getDate()).padStart(2, '0');
-                const formattedDate = `${year}/${month}/${day}`;
-                return formattedDate;
-            },
-        }),
-    ]
-
-    const table = useReactTable({
-        data: book,
-        columns,
-        getCoreRowModel: getCoreRowModel()
-    })
-
+    // Obtener fecha y formatearla
+    const date = new Date(book.released);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const formattedDate = `${year}/${month}/${day}`;
 
     if (!book) {
-        return <p>Book not found</p>;
+        return <p>Book not found</p>; // Si el libro no existe, mostrar un mensaje de "Book not found"
     }
 
     return (
         <div className='containerBookDetails'>
-            <table className='tableBookDetails'>
-                <thead className='headerBookDetails'>
-                    {table.getHeaderGroups().map((headerGroup) => (
-                        <tr className='trHeaderBookDetails' key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => (
-                                <th className='thHeaderBookDetails' key={header.id}>
-                                    {header.isPlaceholder
-                                        ? null
-                                        : flexRender(
-                                            header.column.columnDef.header,
-                                            header.getContext()
-                                        )}
-                                </th>
-                            ))}
-                        </tr>
-                    ))}
-                </thead>
-                <tbody className='bodyBookDetails'>
-                    {table.getRowModel().rows.map((row) => (
-                        <tr className='trBodyBookDetails' key={row.id}>
-                            {row.getVisibleCells().map((cell) => (
-                                <td className='tdBodyBookDetails' key={cell.id}>
-                                    {flexRender(
-                                        cell.column.columnDef.cell,
-                                        cell.getContext()
-                                    )}
-                                </td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            <Link className='backToHome' to='/'>Back to home</Link>
+            <h1 className='titleBookDetails'>Book details</h1>
+            <div className='bookDetails'>
+                <p className='bookDetailsName'><strong>Book name: </strong>{book.name}</p>
+                <div className='bookOtherDetails'>
+                    <span><strong>Author: </strong>{book.authors}</span>
+                    <span><strong>Type: </strong>{book.mediaType}</span>
+                </div>
+                <div className='bookOtherDetails'>
+                    <span><strong>Publisher: </strong>{book.publisher}</span>
+                    <span><strong>Country: </strong>{book.country}</span>
+                </div>
+                <div className='bookOtherDetails'>
+                    <span><strong>Book Id: </strong>{book.isbn}</span>
+                    <span><strong>Released: </strong>{formattedDate}</span>
+                </div>
+            </div>
         </div>
     );
 };

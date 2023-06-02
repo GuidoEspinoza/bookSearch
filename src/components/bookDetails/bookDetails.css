@@ -3,28 +3,43 @@
     margin-top: 2rem;
 }
 
-/* --- Table --- */
-.tableBookDetails {
-    width     : 100%;
-    margin-top: 3rem;
+.backToHome {
+    border       : 1px solid var(--font-color-primary);
+    padding      : 0 1rem;
+    border-radius: var(--border-radius-primary);
+    font         : var(--font-h3);
 }
 
-.thHeaderBookDetails,
-.tdBodyBookDetails {
-    width     : 20%;
+.backToHome:hover {
+    background-color: var(--background-color-hover-btn);
+    color           : var(--font-color-btn-hover);
+}
+
+.titleBookDetails {
+    font      : var(--font-h1);
     text-align: center;
-    height    : 2rem;
 }
 
-.tdBodyBookDetails a:hover {
-    text-decoration: underline;
+.bookDetails {
+    margin-top   : 2rem;
+    max-width    : var(--max-width-details);
+    border       : 1px solid var(--font-color-primary);
+    border-radius: var(--border-radius-primary);
+    padding      : 2rem;
 }
 
-.thHeaderBookDetails {
-    font            : var(--font-h2);
-    background-color: var(--background-color-table-head);
+.bookDetails span {
+    font : var(--font-h3);
+    width: 50%;
 }
 
-.trBodyBookDetails:nth-child(even) {
-    background-color: var(--background-color-table-even);
+.bookDetailsName {
+    text-align: center;
+    font      : var(--font-h2) !important;
+}
+
+.bookOtherDetails {
+    display      : flex;
+    margin-top   : 0.8rem;
+    margin-bottom: 0.8rem;
 }

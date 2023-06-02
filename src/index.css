@@ -1,22 +1,21 @@
 :root {
-  --max-width              : 1200px;
-  --border-radius-primary  : 1rem;
-  --border-radius-secondary: 0.6rem;
+  --max-width            : 1200px;
+  --max-width-details    : 700px;
+  --border-radius-primary: 0.6rem;
 
   --background-color           : #141d2f;
+  --background-color-hover-btn : #f6f8ff;
   --background-color-table-head: #2f4271;
   --background-color-table-even: #592d9c;
 
   --font-color-primary    : #ffffff;
-  --font-color-cta        : #0079ff;
-  --font-color-link       : #4b6a9b;
-  --font-color-unavailable: #697c9a;
+  --font-color-btn-hover  : #2b3442;
+  --font-color-placeholder: #697c9a;
 
-  --font-h1: 26px/38px normal bold monospace;
-  --font-h2: 22px/33px normal bold monospace;
-  --font-h3: 16px/24px normal normal monospace;
-  --font-h4: 13px/20px normal normal monospace;
-  --font-p : 15px/25px normal normal monospace;
+  --font-h1: 34px/40px normal bold monospace;
+  --font-h2: 26px/33px normal bold monospace;
+  --font-h3: 18px/24px normal normal monospace;
+  --font-p : 16px/25px normal normal monospace;
 
 }
 
@@ -24,10 +23,12 @@
 .light-mode {
 
   --background-color           : #f6f8ff;
+  --background-color-hover-btn : #141d2f;
   --background-color-table-head: #bda9a9;
   --background-color-table-even: #8aafd5;
 
-  --font-color-primary: #2b3442;
+  --font-color-primary  : #2b3442;
+  --font-color-btn-hover: #ffffff;
 
 }
 
@@ -55,7 +56,8 @@ a {
 }
 
 #root {
-  height     : 100vh;
-  display    : flex;
-  align-items: center;
+  height         : 100vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
 }

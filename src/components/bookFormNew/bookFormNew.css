@@ -1,0 +1,52 @@
+.containerBookFormNew {
+    width     : 100%;
+    margin-top: 2rem;
+}
+
+.titleFormNewBook {
+    text-align: center;
+    font      : var(--font-h1);
+}
+
+.formNewBook {
+    display       : flex;
+    flex-direction: column;
+    margin-top    : 1rem;
+}
+
+.inputsForm,
+.errorBookFormNew {
+    display: flex;
+}
+
+.formNewBook label {
+    font : var(--font-h3);
+    color: var(--font-color-primary);
+}
+
+.formNewBook input {
+    width           : 15rem;
+    height          : 1.5rem;
+    padding-left    : 1rem;
+    background-color: var(--background-color);
+    color           : var(--font-color-primary);
+    border          : 1px solid var(--font-color-primary);
+    border-radius   : var(--border-radius-primary);
+    font            : var(--font-h3);
+}
+
+.btnSubmitForm {
+    width           : 10rem;
+    margin-top      : 2rem;
+    background-color: var(--background-color);
+    color           : var(--font-color-primary);
+    font            : var(--font-h3);
+    border          : 1px solid var(--font-color-primary);
+    border-radius   : var(--border-radius-primary);
+    cursor          : pointer;
+}
+
+.btnSubmitForm:hover {
+    background-color: var(--background-color-hover-btn);
+    color           : var(--font-color-btn-hover);
+}
