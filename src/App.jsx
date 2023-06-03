@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import BookList from './components/bookList/booklist';
+import BookList from './components/bookList/BookList';
 import BookDetails from './components/bookDetails/BookDetails';
 import BookFormNew from './components/bookFormNew/BookFormNew';
 import BookFavorites from './components/bookFavorites/BookFavorites';

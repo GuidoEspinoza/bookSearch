@@ -17,17 +17,13 @@ Por último cuenta con una vista de favoritos donde el usuario puede guardar lib
 - React Redux Toolkit: Utilidades para simplificar el desarrollo con Redux. `npm install @reduxjs/toolkit`
 - React Router Dom: Manejo de navegación en una aplicación de React. `npm install react-router-dom`
 - React Table: Biblioteca para crear tablas flexibles en React. `npm install @tanstack/react-table`
-- Headless React: Componentes sin estilos predefinidos para interfaces personalizadas. `npm install @headlessui/react`
 - Jest: Framework de pruebas unitarias para JavaScript. `npm install --save-dev jest`
-- Storybook: Herramienta para desarrollar y mostrar componentes de forma aislada. `npx storybook@latest init`
 
 ## Ejecución
 
 Para visualizar el proyecto primero se debe ejecutar el comando `npm install` para instalar todas las dependiencias.
 
 Seguido a ello se debe ejecutar el comando `npm run dev`
-
-Si se quiere visualizar el Storybook se debe ejecutar el comando `npm run storybook`
 
 ## Contribuidor
 
