@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './switchMode.css';
+import './switchTheme.css';
 
 const SwitchTheme = () => {
     // Estado para controlar si el modo oscuro está activado o no

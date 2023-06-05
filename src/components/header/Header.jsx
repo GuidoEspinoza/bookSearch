@@ -1,4 +1,4 @@
-import SwitchTheme from './SwitchMode';
+import SwitchTheme from './SwitchTheme';
 
 import './header.css'
 
